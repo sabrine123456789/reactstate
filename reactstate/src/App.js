@@ -1,0 +1,61 @@
+import React, { Component } from "react";
+import "./App.css";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      person: {
+        fullName: "Balti",
+        bio: "A singer ",
+        imgSrc:
+          "data:image/jpeg;base64,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",
+        profession: "Rapper, Composer and Music producer.",
+      },
+      show: false,
+      elapsedTime: 0,
+    };
+  }
+
+  toggleProfile = () => {
+    this.setState((prevState) => ({
+      show: !prevState.show,
+    }));
+  };
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.setState((prevState) => ({
+        elapsedTime: prevState.elapsedTime + 1,
+      }));
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    const { person, show, elapsedTime } = this.state;
+
+    return (
+      <div className="App">
+        <h1>Profile App</h1>
+        <button onClick={this.toggleProfile}>
+          {show ? "Hide Profile" : "Show Profile"}
+        </button>
+        {show && (
+          <div>
+            <h2>{person.fullName}</h2>
+            <p>{person.bio}</p>
+            <img src={person.imgSrc} alt={person.fullName} />
+            <p>Profession: {person.profession}</p>
+          </div>
+        )}
+        <p>Time elapsed since mount: {elapsedTime} seconds</p>
+      </div>
+    );
+  }
+}
+
+export default App;
